@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/description_place.dart';
+import 'package:platzi_trips_app/gradient_background.dart';
 import 'package:platzi_trips_app/review_list.dart';
 
 void main() {
@@ -31,11 +32,17 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hola mundo!')
-        ),
-        // body: new DescriptionPlace('Duwili Ella', 3.5, descriptionPlace)
-        body: new ReviewList()
+        body: Stack(
+          children: <Widget>[
+            GradientBackground(),
+            ListView(
+              children: <Widget>[
+                DescriptionPlace('Duwili Ella', 3.5, descriptionPlace),
+                ReviewList()
+              ],
+            )
+          ],
+        )
       )
         //MyHomePage(title: 'Flutter Demo Home Page'),
     );
