@@ -46,7 +46,18 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/bg.jpg
+    - assets/images/profiles/1.jpg
+    - assets/images/profiles/2.jpg
+    - assets/images/profiles/3.jpg
+    - assets/images/profiles/4.jpg
+    - assets/images/places/1.jpg
+    - assets/images/places/2.jpg
+    - assets/images/places/3.jpg
+    - assets/images/places/4.jpg
+  fonts:
+    - family: Alef
+      fonts:
+        - asset: assets/fonts/Alef-Regular.ttf
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

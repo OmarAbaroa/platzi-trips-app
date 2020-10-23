@@ -56,18 +56,19 @@ class DescriptionPlace extends StatelessWidget{
             namePlace,
             style: TextStyle(
               fontSize: 30.0,
-              fontWeight: FontWeight.w900
+              fontWeight: FontWeight.w900,
+              fontFamily: "Alef"
             ),
             textAlign: TextAlign.left,
           ),
         ),
         Row(
           children: <Widget>[
-            star,
-            star,
-            star,
-            star_half,
-            star_empty
+            stars >= 1.0 ? star : stars == 0.5 ? star_half : star_empty,
+            stars >= 2.0 ? star : stars == 1.5 ? star_half : star_empty,
+            stars >= 3.0 ? star : stars == 2.5 ? star_half : star_empty,
+            stars >= 4.0 ? star : stars == 3.5 ? star_half : star_empty,
+            stars >= 5.0 ? star : stars == 4.5 ? star_half : star_empty,
           ],
         )
       ],
@@ -83,6 +84,7 @@ class DescriptionPlace extends StatelessWidget{
         descriptionPlace,
         style: const TextStyle(
           fontSize: 16.0,
+          fontFamily: "Alef",
           fontWeight: FontWeight.bold,
           color: Color(0xFF56575A)
         ),

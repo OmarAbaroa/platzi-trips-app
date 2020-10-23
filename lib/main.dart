@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/description_place.dart';
+import 'package:platzi_trips_app/review_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Hola mundo!')
         ),
-        body: new DescriptionPlace('Duwili Ella', 5.0, descriptionPlace)
+        // body: new DescriptionPlace('Duwili Ella', 3.5, descriptionPlace)
+        body: new ReviewList()
       )
         //MyHomePage(title: 'Flutter Demo Home Page'),
     );
