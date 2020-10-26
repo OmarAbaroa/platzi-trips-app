@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/description_place.dart';
-import 'package:platzi_trips_app/gradient_background.dart';
+import 'package:platzi_trips_app/header_appbar.dart';
 import 'package:platzi_trips_app/review_list.dart';
 
 void main() {
@@ -34,13 +34,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Stack(
           children: <Widget>[
-            GradientBackground(),
             ListView(
               children: <Widget>[
                 DescriptionPlace('Duwili Ella', 3.5, descriptionPlace),
                 ReviewList()
               ],
-            )
+            ),
+            HeaderAppBar()
           ],
         )
       )
