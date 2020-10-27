@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/floating_action_button_fav.dart';
 
 class CardImage extends StatelessWidget{
 
@@ -35,7 +36,13 @@ class CardImage extends StatelessWidget{
       ),
     );
 
-    return card;
+    return Stack(
+      alignment: Alignment(1.04,1.15),
+      children: <Widget>[
+        card,
+        FloatingActionButtonFav()
+      ],
+    );
   }
 
 }
