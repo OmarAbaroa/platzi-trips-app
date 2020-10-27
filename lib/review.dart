@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/profile_picture.dart';
+import 'package:platzi_trips_app/user_name.dart';
 
 class Review extends StatelessWidget{
 
@@ -13,19 +15,7 @@ class Review extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    final userName = Container(
-      margin: EdgeInsets.only(
-        left: 20.0
-      ),
-      child: Text(
-        name,
-        textAlign: TextAlign.left,
-        style: TextStyle(
-          fontFamily: 'Alef',
-          fontSize: 17.0
-        ),
-      ),
-    );
+
 
     final userInfo = Container(
       margin: EdgeInsets.only(
@@ -60,30 +50,16 @@ class Review extends StatelessWidget{
     final userDetail = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        userName,
+        UserName(name),
         userInfo,
         userComment
       ],
     );
 
-    final photo = Container(
-      margin: EdgeInsets.only(
-        top: 20.0,
-        left: 20.0
-      ),
-      width: 80,
-      height: 80,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(pathImage)
-        )
-      ),
-    );
+
     return Row(
       children: <Widget>[
-        photo,
+        ProfilePicture(pathImage),
         userDetail
       ],
     );
